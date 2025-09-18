@@ -1,209 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upcoming Dishes - Delicious Bites</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-brand">
-                <img src="assets/logo.svg" alt="Restaurant Logo" class="logo">
-                <h1>Delicious Bites</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="menu.html" class="nav-link">Menu</a></li>
-                <li><a href="cart.html" class="nav-link">Cart</a></li>
-                <li><a href="review.html" class="nav-link">Reviews</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="nav-brand">
+          <img src="assets/logo.svg" alt="Restaurant Logo" class="logo" />
+          <h1>Delicious Bites</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="cart.html" class="nav-link">Cart</a></li>
+          <li><a href="review.html" class="nav-link">Reviews</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="upcoming-container">
-        <div class="upcoming-header">
-            <h2>Coming Soon</h2>
-            <p>Exciting new dishes we're preparing for you</p>
+      <div class="upcoming-header">
+        <h2>Coming Soon</h2>
+        <p>Exciting new dishes we're preparing for you</p>
+      </div>
+
+      <div class="upcoming-grid">
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-pizza-slice"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Artisan Pizza Collection</h3>
+            <p>
+              Handcrafted pizzas with premium ingredients and unique flavor
+              combinations
+            </p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming October 2025</span>
+            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Artisan Pizza Collection"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
         </div>
 
-        <div class="upcoming-grid">
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-pizza-slice"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Artisan Pizza Collection</h3>
-                    <p>Handcrafted pizzas with premium ingredients and unique flavor combinations</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming February 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Artisan Pizza Collection">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-ice-cream"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Dessert Paradise</h3>
+            <p>
+              Indulgent desserts including traditional Indian sweets and modern
+              creations
+            </p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming October 2025</span>
             </div>
-
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-ice-cream"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Dessert Paradise</h3>
-                    <p>Indulgent desserts including traditional Indian sweets and modern creations</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming March 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Dessert Paradise">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
-            </div>
-
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-fish"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Fresh Seafood Menu</h3>
-                    <p>Ocean-fresh seafood dishes with authentic coastal flavors</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming April 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Fresh Seafood Menu">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
-            </div>
-
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Healthy Bowl Series</h3>
-                    <p>Nutritious and delicious Buddha bowls with fresh, organic ingredients</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming May 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Healthy Bowl Series">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
-            </div>
-
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-coffee"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Specialty Beverages</h3>
-                    <p>Artisanal coffee, teas, and signature drinks to complement your meal</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming June 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Specialty Beverages">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
-            </div>
-
-            <div class="upcoming-card">
-                <div class="upcoming-image">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <div class="upcoming-content">
-                    <h3>Chef's Special Tasting Menu</h3>
-                    <p>A curated multi-course experience showcasing our chef's creativity</p>
-                    <div class="upcoming-date">
-                        <i class="fas fa-calendar"></i>
-                        <span>Coming July 2025</span>
-                    </div>
-                    <button class="btn btn-secondary notify-btn" data-dish="Chef's Special Tasting Menu">
-                        <i class="fas fa-bell"></i>
-                        Notify Me
-                    </button>
-                </div>
-            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Dessert Paradise"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
         </div>
 
-        <div class="newsletter-section">
-            <h3>Stay Updated</h3>
-            <p>Subscribe to our newsletter for the latest updates on new dishes and special offers</p>
-            <form id="newsletterForm" class="newsletter-form">
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i>
-                    Subscribe
-                </button>
-            </form>
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-fish"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Fresh Seafood Menu</h3>
+            <p>Ocean-fresh seafood dishes with authentic coastal flavors</p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming November 2025</span>
+            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Fresh Seafood Menu"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
         </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Healthy Bowl Series</h3>
+            <p>
+              Nutritious and delicious Buddha bowls with fresh, organic
+              ingredients
+            </p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming December 2025</span>
+            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Healthy Bowl Series"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Specialty Beverages</h3>
+            <p>
+              Artisanal coffee, teas, and signature drinks to complement your
+              meal
+            </p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming December 2025</span>
+            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Specialty Beverages"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-image">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <div class="upcoming-content">
+            <h3>Chef's Special Tasting Menu</h3>
+            <p>
+              A curated multi-course experience showcasing our chef's creativity
+            </p>
+            <div class="upcoming-date">
+              <i class="fas fa-calendar"></i>
+              <span>Coming January 2026</span>
+            </div>
+            <button
+              class="btn btn-secondary notify-btn"
+              data-dish="Chef's Special Tasting Menu"
+            >
+              <i class="fas fa-bell"></i>
+              Notify Me
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter-section">
+        <h3>Stay Updated</h3>
+        <p>
+          Subscribe to our newsletter for the latest updates on new dishes and
+          special offers
+        </p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Subscribe
+          </button>
+        </form>
+      </div>
     </main>
 
     <script src="js/app.js"></script>
     <script>
-        // Handle notification requests
-        document.querySelectorAll('.notify-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const dish = this.getAttribute('data-dish');
-                const notifications = JSON.parse(localStorage.getItem('notifications')) || [];
-                
-                if (!notifications.includes(dish)) {
-                    notifications.push(dish);
-                    localStorage.setItem('notifications', JSON.stringify(notifications));
-                    
-                    this.innerHTML = '<i class="fas fa-check"></i> Notified';
-                    this.classList.add('notified');
-                    this.disabled = true;
-                    
-                    showToast(`You'll be notified when ${dish} is available!`, 'success');
-                } else {
-                    showToast('You\'re already subscribed to this notification', 'info');
-                }
-            });
+      // Handle notification requests
+      document.querySelectorAll(".notify-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const dish = this.getAttribute("data-dish");
+          const notifications =
+            JSON.parse(localStorage.getItem("notifications")) || [];
+
+          if (!notifications.includes(dish)) {
+            notifications.push(dish);
+            localStorage.setItem(
+              "notifications",
+              JSON.stringify(notifications)
+            );
+
+            this.innerHTML = '<i class="fas fa-check"></i> Notified';
+            this.classList.add("notified");
+            this.disabled = true;
+
+            showToast(
+              `You'll be notified when ${dish} is available!`,
+              "success"
+            );
+          } else {
+            showToast("You're already subscribed to this notification", "info");
+          }
+        });
+      });
+
+      // Handle newsletter subscription
+      document
+        .getElementById("newsletterForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+
+          // Store email in localStorage (in real app, send to server)
+          const subscribers =
+            JSON.parse(localStorage.getItem("subscribers")) || [];
+          if (!subscribers.includes(email)) {
+            subscribers.push(email);
+            localStorage.setItem("subscribers", JSON.stringify(subscribers));
+            showToast("Successfully subscribed to newsletter!", "success");
+            this.reset();
+          } else {
+            showToast("You're already subscribed!", "info");
+          }
         });
 
-        // Handle newsletter subscription
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            
-            // Store email in localStorage (in real app, send to server)
-            const subscribers = JSON.parse(localStorage.getItem('subscribers')) || [];
-            if (!subscribers.includes(email)) {
-                subscribers.push(email);
-                localStorage.setItem('subscribers', JSON.stringify(subscribers));
-                showToast('Successfully subscribed to newsletter!', 'success');
-                this.reset();
-            } else {
-                showToast('You\'re already subscribed!', 'info');
-            }
+      // Check for existing notifications on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const notifications =
+          JSON.parse(localStorage.getItem("notifications")) || [];
+        notifications.forEach((dish) => {
+          const btn = document.querySelector(`[data-dish="${dish}"]`);
+          if (btn) {
+            btn.innerHTML = '<i class="fas fa-check"></i> Notified';
+            btn.classList.add("notified");
+            btn.disabled = true;
+          }
         });
-
-        // Check for existing notifications on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const notifications = JSON.parse(localStorage.getItem('notifications')) || [];
-            notifications.forEach(dish => {
-                const btn = document.querySelector(`[data-dish="${dish}"]`);
-                if (btn) {
-                    btn.innerHTML = '<i class="fas fa-check"></i> Notified';
-                    btn.classList.add('notified');
-                    btn.disabled = true;
-                }
-            });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
