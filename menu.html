@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Delicious Bites</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="assets/logo.svg" alt="Restaurant Logo" class="logo">
+                <h1>Delicious Bites</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="cart.html" class="nav-link">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+                <li><a href="upcoming.html" class="nav-link">Upcoming</a></li>
+                <li><a href="review.html" class="nav-link">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="menu-container">
+        <div class="menu-header">
+            <h2>Our Menu</h2>
+            <p>Choose from our delicious selection</p>
+        </div>
+
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="veg-starters">Veg Starters</button>
+            <button class="category-btn" data-category="nonveg-starters">Non-Veg Starters</button>
+            <button class="category-btn" data-category="veg-biryani">Veg Biryani</button>
+            <button class="category-btn" data-category="nonveg-biryani">Non-Veg Biryani</button>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Veg Starters -->
+            <div class="menu-item" data-category="veg-starters">
+                <div class="menu-item-image">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Samosa</h3>
+                    <p>Crispy pastry filled with spiced potatoes</p>
+                    <div class="menu-item-price">₹50</div>
+                    <button class="btn btn-add-to-cart" data-item="Samosa" data-price="50">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="veg-starters">
+                <div class="menu-item-image">
+                    <i class="fas fa-pepper-hot"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Chilli Paneer</h3>
+                    <p>Spicy cottage cheese with bell peppers</p>
+                    <div class="menu-item-price">₹150</div>
+                    <button class="btn btn-add-to-cart" data-item="Chilli Paneer" data-price="150">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="veg-starters">
+                <div class="menu-item-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Spring Rolls</h3>
+                    <p>Crispy rolls filled with fresh vegetables</p>
+                    <div class="menu-item-price">₹120</div>
+                    <button class="btn btn-add-to-cart" data-item="Spring Rolls" data-price="120">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Non-Veg Starters -->
+            <div class="menu-item" data-category="nonveg-starters">
+                <div class="menu-item-image">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Chilli Chicken</h3>
+                    <p>Spicy chicken with aromatic spices</p>
+                    <div class="menu-item-price">₹180</div>
+                    <button class="btn btn-add-to-cart" data-item="Chilli Chicken" data-price="180">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="nonveg-starters">
+                <div class="menu-item-image">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Drums of Heaven</h3>
+                    <p>Tender chicken lollipops with spicy coating</p>
+                    <div class="menu-item-price">₹200</div>
+                    <button class="btn btn-add-to-cart" data-item="Drums of Heaven" data-price="200">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Veg Biryani -->
+            <div class="menu-item" data-category="veg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-bowl-rice"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Veg Biryani</h3>
+                    <p>Aromatic basmati rice with mixed vegetables</p>
+                    <div class="menu-item-price">₹200</div>
+                    <button class="btn btn-add-to-cart" data-item="Veg Biryani" data-price="200">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="veg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-cheese"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Paneer Biryani</h3>
+                    <p>Fragrant rice with marinated paneer cubes</p>
+                    <div class="menu-item-price">₹220</div>
+                    <button class="btn btn-add-to-cart" data-item="Paneer Biryani" data-price="220">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="veg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Kaju Biryani</h3>
+                    <p>Rich biryani with cashews and aromatic spices</p>
+                    <div class="menu-item-price">₹250</div>
+                    <button class="btn btn-add-to-cart" data-item="Kaju Biryani" data-price="250">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="veg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Special Biryani</h3>
+                    <p>Chef's special with premium ingredients</p>
+                    <div class="menu-item-price">₹290</div>
+                    <button class="btn btn-add-to-cart" data-item="Special Biryani" data-price="290">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Non-Veg Biryani -->
+            <div class="menu-item" data-category="nonveg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Chicken Dum Biryani</h3>
+                    <p>Traditional slow-cooked chicken biryani</p>
+                    <div class="menu-item-price">₹250</div>
+                    <button class="btn btn-add-to-cart" data-item="Chicken Dum Biryani" data-price="250">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="nonveg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>Chicken Fry Piece Biryani</h3>
+                    <p>Biryani with crispy fried chicken pieces</p>
+                    <div class="menu-item-price">₹280</div>
+                    <button class="btn btn-add-to-cart" data-item="Chicken Fry Piece Biryani" data-price="280">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="nonveg-biryani">
+                <div class="menu-item-image">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="menu-item-content">
+                    <h3>France Biryani</h3>
+                    <p>Premium biryani with French cooking techniques</p>
+                    <div class="menu-item-price">₹320</div>
+                    <button class="btn btn-add-to-cart" data-item="France Biryani" data-price="320">
+                        <i class="fas fa-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <button id="viewCartBtn" class="btn btn-primary">
+                <i class="fas fa-shopping-cart"></i>
+                View Cart
+            </button>
+        </div>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

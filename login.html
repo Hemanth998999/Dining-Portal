@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Delicious Bites</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-user-circle"></i>
+                <h2>Customer Login</h2>
+                <p>Please enter your details to continue</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="customerName">
+                        <i class="fas fa-user"></i>
+                        Customer Name
+                    </label>
+                    <input type="text" id="customerName" name="customerName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerNo">
+                        <i class="fas fa-phone"></i>
+                        Customer Number
+                    </label>
+                    <input type="tel" id="customerNo" name="customerNo" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>New customer? <a href="index.html">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Logging in...</p>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

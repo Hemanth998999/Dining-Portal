@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews - Delicious Bites</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <img src="assets/logo.svg" alt="Restaurant Logo" class="logo" />
+          <h1>Delicious Bites</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="cart.html" class="nav-link">Cart</a></li>
+          <li><a href="upcoming.html" class="nav-link">Upcoming</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="review-container">
+      <div class="review-header">
+        <h2>Customer Reviews</h2>
+        <p>See what our customers say about us</p>
+      </div>
+
+      <div class="review-stats">
+        <div class="stat-card">
+          <h3>4.8</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>Average Rating</p>
+        </div>
+        <div class="stat-card">
+          <h3>1,247</h3>
+          <p>Total Reviews</p>
+        </div>
+        <div class="stat-card">
+          <h3>98%</h3>
+          <p>Satisfaction Rate</p>
+        </div>
+      </div>
+
+      <div class="review-form-container">
+        <h3>Write a Review</h3>
+        <form id="reviewForm" class="review-form">
+          <div class="form-group">
+            <label for="reviewerName">Your Name</label>
+            <input type="text" id="reviewerName" name="reviewerName" required />
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            <div class="rating-input">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reviewText">Your Review</label>
+            <textarea
+              id="reviewText"
+              name="reviewText"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+      </div>
+
+      <div class="reviews-list" id="reviewsList">
+        <!-- Reviews will be populated by JavaScript -->
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script>
+      // Sample reviews data
+      const sampleReviews = [
+        {
+          name: "Raghava Ram",
+          rating: 5,
+          text: "Amazing food and excellent service! The biryani was absolutely delicious.",
+          date: "2025-01-15",
+        },
+        {
+          name: "Bharat Varma",
+          rating: 4,
+          text: "Great variety of dishes. The delivery was quick and food was still hot.",
+          date: "2025-01-14",
+        },
+        {
+          name: "Sravani",
+          rating: 5,
+          text: "Best restaurant in town! The paneer dishes are my favorite.",
+          date: "2025-01-13",
+        },
+      ];
+
+      // Load and display reviews
+      function loadReviews() {
+        const reviewsList = document.getElementById("reviewsList");
+        const reviews =
+          JSON.parse(localStorage.getItem("reviews")) || sampleReviews;
+
+        reviewsList.innerHTML = reviews
+          .map(
+            (review) => `
+              <div class="review-card">
+                  <div class="review-header">
+                      <h4>${review.name}</h4>
+                      <div class="review-rating">
+                          ${Array.from(
+                            { length: 5 },
+                            (_, i) =>
+                              `<i class="fas fa-star ${
+                                i < review.rating ? "active" : ""
+                              }"></i>`
+                          ).join("")}
+                      </div>
+                  </div>
+                  <p class="review-text">${review.text}</p>
+                  <span class="review-date">${new Date(
+                    review.date
+                  ).toLocaleDateString()}</span>
+              </div>
+          `
+          )
+          .join("");
+      }
+
+      // Handle review form submission
+      document
+        .getElementById("reviewForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(e.target);
+          const review = {
+            name: formData.get("reviewerName"),
+            rating: parseInt(formData.get("rating")),
+            text: formData.get("reviewText"),
+            date: new Date().toISOString().split("T")[0],
+          };
+
+          const reviews =
+            JSON.parse(localStorage.getItem("reviews")) || sampleReviews;
+          reviews.unshift(review);
+          localStorage.setItem("reviews", JSON.stringify(reviews));
+
+          loadReviews();
+          e.target.reset();
+
+          // Show success message
+          showToast("Review submitted successfully!", "success");
+        });
+
+      // Load reviews on page load
+      document.addEventListener("DOMContentLoaded", loadReviews);
+    </script>
+  </body>
+</html>

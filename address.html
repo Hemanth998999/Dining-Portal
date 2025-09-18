@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address - Delicious Bites</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="address-container">
+        <div class="address-card">
+            <div class="address-header">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Delivery Address</h2>
+                <p>Please provide your delivery address</p>
+            </div>
+            
+            <form id="addressForm" class="address-form">
+                <div class="form-group">
+                    <label for="houseFlatNo">
+                        <i class="fas fa-home"></i>
+                        House/Flat No
+                    </label>
+                    <input type="text" id="houseFlatNo" name="houseFlatNo" required>
+                    <span class="error-message" id="houseError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="streetName">
+                        <i class="fas fa-road"></i>
+                        Street Name
+                    </label>
+                    <input type="text" id="streetName" name="streetName" required>
+                    <span class="error-message" id="streetError"></span>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">
+                            <i class="fas fa-city"></i>
+                            City
+                        </label>
+                        <input type="text" id="city" name="city" required>
+                        <span class="error-message" id="cityError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="state">
+                            <i class="fas fa-flag"></i>
+                            State
+                        </label>
+                        <input type="text" id="state" name="state" required>
+                        <span class="error-message" id="stateError"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pincode">
+                        <i class="fas fa-mail-bulk"></i>
+                        Pincode
+                    </label>
+                    <input type="text" id="pincode" name="pincode" required>
+                    <span class="error-message" id="pincodeError"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-check"></i>
+                    Save Address
+                </button>
+            </form>
+            
+            <div class="address-footer">
+                <a href="login.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
